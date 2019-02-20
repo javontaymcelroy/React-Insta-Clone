@@ -3,6 +3,8 @@ import './App.css';
 import PostContainer from './components/PostContainer';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar';
+import LoginPage from './components/Login';
+import Authenticate from './components/Authenticate';
 
 class App extends Component {
   constructor() {
@@ -24,4 +26,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Authenticate(App)(LoginPage);
