@@ -23,18 +23,21 @@ class Login extends Component {
   render() {
     return (
       <div className='login-form'>
-        <h3>Welcome to React Insta Clone</h3>
-        <div>Please Login</div>
-        <form>
+        <img
+          className='ig-logo'
+          src='https://i.ibb.co/VwVtyJp/Instagram-TV-Broadcast-Photo.png'
+          alt='instagram_logo'
+        />
+        <form className='top-form'>
           <input
             type='text'
-            placeholder='User Name'
+            placeholder='Phone number, username, or email'
             name='username'
             value={this.state.username}
             onChange={this.handleInputChange}
           />
         </form>
-        <form>
+        <form className='btn-form'>
           <input
             type='password'
             placeholder='Password'
@@ -42,8 +45,7 @@ class Login extends Component {
             value={this.state.password}
             onChange={this.handleInputChange}
           />
-          <br />
-          <button color='success' size='large' onClick={this.handleLoginSubmit}>
+          <button className='login-btn' onClick={this.handleLoginSubmit}>
             Log In
           </button>
         </form>
