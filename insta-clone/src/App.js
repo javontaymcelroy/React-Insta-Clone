@@ -11,20 +11,29 @@ class App extends Component {
     super();
     this.state = {
       dummyData: dummyData,
-      search: '',
-      searchData: []
+      search: ''
     };
   }
 
-  updateSearch(event) {
-    let postsFiltered = this.state.dummyData.filter(post => {
-      if (post.username.includes(event.target.value)) {
-        return post;
-      }
-    });
+  updateSearch = event => {
+    if (event.target.value === '') {
+      this.setState({ dummyDate: dummyData });
+      return;
+    }
 
-    this.setState({ searchData: postsFiltered });
-  }
+    let word = event.target.value;
+
+    this.setState(state => {
+      state.dummyData = state.dummyData.filter(post => {
+        if (post.username.includes(word)) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+      return { dummyData: state.dummyData };
+    });
+  };
 
   render() {
     return (

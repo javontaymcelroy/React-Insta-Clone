@@ -4,9 +4,6 @@ import './SearchBar.css';
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      search: ''
-    };
   }
 
   render() {
@@ -22,8 +19,9 @@ class SearchBar extends React.Component {
           placeholder='Search'
           name='search'
           className='search'
-          value={this.props.search}
-          onChange={this.props.updateSearch}
+          onChange={e => {
+            this.props.updateSearch(e);
+          }}
         />
         <div className='activity-icons'>
           <img
