@@ -19,7 +19,6 @@
 .search {
   width: 250px;
   height: 28px;
-  margin-right: 200px;
   border-radius: 5px;
   border: 1px solid rgb(211, 211, 211);
   background-color: #fafafa48;
@@ -40,4 +39,20 @@ input::placeholder {
 .profile {
   width: auto;
   height: 40px;
+}
+.activity-icons {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.activity-icons svg {
+  color: grey;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.activity-icons svg:hover {
+  transition: 0.3s ease-in-out;
+  color: rgb(36, 36, 36);
 }
