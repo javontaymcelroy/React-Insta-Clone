@@ -23,10 +23,6 @@
   border-radius: 0px;
 }
 
-input::placeholder {
+form input::placeholder {
   text-align: left;
-}
-
-input {
-  margin-left: 10px;
 }

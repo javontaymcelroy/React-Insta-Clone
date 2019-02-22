@@ -2,6 +2,7 @@
   border: 1px solid rgb(230, 230, 230);
   width: 640px;
   margin: 100px auto;
+  border-radius: 8px;
 }
 
 .post-header {
@@ -25,4 +26,15 @@
   text-align: left;
   margin-left: 20px;
   font-weight: bold;
+}
+
+.post .feather {
+  justify-content: left;
+  margin-right: 580px;
+  margin-top: 10px;
+}
+
+.post .feather:active {
+  fill: rgb(255, 72, 72);
+  stroke: rgb(255, 72, 72);
 }
